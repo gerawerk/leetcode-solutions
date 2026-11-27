@@ -48,4 +48,8 @@ Output:
 */
 
 -- Write your solution below:
-
+SELECT score, dense_rank() OVER (
+        order by score desc
+    ) as rank
+from scores
+order by score desc;
